@@ -22,15 +22,12 @@ function AddTask({ onAdd }) {
   return (
     <form className='add-form' onSubmit={onSubmit}>
       <div className='form-control'>
-        <label htmlFor='task' className='form-control-label'>
-          Task
-        </label>
+        <label htmlFor='task'>Task</label>
         <input
           type='text'
           name='task'
           id='task'
           placeholder='Add Task'
-          className='form-control input'
           value={text}
           onChange={(e) => {
             setText(e.target.value);
@@ -38,15 +35,12 @@ function AddTask({ onAdd }) {
         />
       </div>
       <div className='form-control'>
-        <label htmlFor='date-time' className='form-control-label'>
-          Day & Time
-        </label>
+        <label htmlFor='date-time'>Day & Time</label>
         <input
           type='text'
           name='date-time'
           id='date-time'
           placeholder='Add Day & Time'
-          className='form-control input'
           value={day}
           onChange={(e) => {
             setDay(e.target.value);
@@ -54,24 +48,19 @@ function AddTask({ onAdd }) {
         />
       </div>
       <div className='form-control form-control-check'>
-        <label htmlFor='reminder' className='form-control-check label'>
-          Set Reminder
-        </label>
+        <label htmlFor='reminder'>Set Reminder</label>
         <input
           type='checkbox'
           name='reminder'
           id='reminder'
           checked={reminder}
-          className='form-control-check input'
           value={reminder}
           onChange={(e) => {
             setReminder(e.currentTarget.checked);
           }}
         />
       </div>
-      <button type='submit' className='btn btn-block'>
-        Save Task
-      </button>
+      <input type='submit' className='btn btn-block' value='Save Task' />
     </form>
   );
 }

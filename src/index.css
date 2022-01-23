@@ -94,7 +94,7 @@ body {
 .form-control-check {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .form-control-check label {
@@ -102,7 +102,7 @@ body {
 }
 
 .form-control-check input {
-  flex: 2;
+  flex: 1;
   height: 20px;
 }
 

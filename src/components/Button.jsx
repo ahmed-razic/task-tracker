@@ -5,7 +5,9 @@ function Button({ color, text, onClick }) {
     <button
       className='btn'
       style={{ backgroundColor: color }}
-      onClick={onClick}
+      onClick={() => {
+        onClick('text from button');
+      }}
     >
       {text}
     </button>
